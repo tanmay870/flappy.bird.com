@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #70c5ce; /* Sky blue background */
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Hide scrollbars if content overflows */
+}
+
+#game-container {
+    position: relative;
+    border: 2px solid #333;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    background-color: #4ec0ca; /* Lighter blue for the game area */
+    overflow: hidden; /* Essential for pipes to appear and disappear correctly */
+}
+
+#gameCanvas {
+    background-color: #70c5ce; /* Matches body background to blend */
+    display: block; /* Removes extra space below canvas */
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    z-index: 10;
+}
+
+#instructions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#startButton {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    font-size: 1.8em;
+    font-weight: bold;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+#startButton:hover {
+    background-color: #45a049;
+}
